@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import Home from './components/layouts/Home.tsx';
+import Navbar from './components/Navbar.tsx';
+import styled from 'styled-components';
 import './App.css';
+
+const Root = styled.div`
+    background-color: #13171C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Root>
+      <Navbar/>
+      <Home/>
+    </Root>
   );
 }
 
