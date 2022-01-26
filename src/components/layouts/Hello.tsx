@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
+import './../../App.css';
 
 const Hello = () => {
 
@@ -14,14 +14,14 @@ const Hello = () => {
       width: 80%;
       display:flex;
       margin-left: 20%;
-      margin-right: 10%;
       margin-top: 5%;
       margin-bottom: 5%;
     `;
 
     const AvatarWrapper = styled.div`
+      margin-top: 5%;
       flex-direction: column;
-      width: 20%;
+      width: 25%;
     `;
 
     const SocialMediaBox = styled.div`
@@ -37,6 +37,18 @@ const Hello = () => {
       height: 50px;
     `;
 
+    const HomeTextWrapper = styled.div`
+      margin-left: 5%;
+      margin-right: 15%;
+      width:80%;
+    `;
+
+    const ListWrapper = styled.div`
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+    `;
+
     return(
         <Container>
             <AvatarWrapper>
@@ -49,13 +61,14 @@ const Hello = () => {
                         .typeString("Student 3 roku informatyki")
                         .pauseFor(1500)
                         .deleteAll()
-                        .typeString("Quality advisor w strefakursow.pl")
+                        .typeString("Quality advisor w <a style='color: #008efa' href='https://strefakursow.pl'>strefakursow.pl</a>")
                         .pauseFor(1500)
                         .deleteAll()
                         .typeString("Korepetytor")
                         .pauseFor(1000)
                         .deleteAll()
                         .typeString("<b>Przyszły fullstack developer.</b>")
+                        .pauseFor(5000)
                         .start();
                 }
                 }/>
@@ -74,6 +87,37 @@ const Hello = () => {
 
             </AvatarWrapper>
 
+            <HomeTextWrapper>
+                <h1 >Cześć <span className={'wave'}>👋</span></h1>
+                <p>Nazywam się Darek i jestem studentem III roku informatyki na PWSZ w Tarnowie. Zawodowo jestem związany z firmą strefakursow.pl, gdzie pracuję na stanowisku doradcy jakości-moje zadanie polega głównie na kontroli przesyłanych kursów pod kątem merytorycznym i technicznym.</p>
+                <p>Po godzinach udzielam się jako korepetytor z szeroko pojętego zakresu informatyki i programowania. </p>
+                <p>Uważam się za osobę odpowiedzialną, zawziętą i upartą w dążeniu do celu; a nim jest rozpoczęcie kariery w sektorze IT.</p>
+
+                <p>Dlaczego akurat ja? Pomimo braku komercyjnego doświadczenia, praca w sektorze e-learningowym sprawia, że ciągle wszechstronnie się rozwijam. W firmie poznałem wiele narzędzi, metodyki pracy programistów czy choćby zasad czystego kodu, co w połączeniu ze znajomością paradygmatów oraz języków programowania powinno stanowić solidną podstawę do dalszego rozwoju w sektorze IT.</p>
+
+                <p>
+                    Jestem otwarty na nowe możliwości-jeżeli Cię zainteresowałem, to skontaktuj się ze mną poprzez LinkedIn lub mailowo.
+                </p>
+
+                <ListWrapper>
+                    <h2>Zainteresowania</h2>
+                    <ul>
+                        <li>Software Engineering</li>
+                        <li>Web development</li>
+                        <li>New technologies</li>
+                        <li>Personal Growth</li>
+                    </ul>
+                </ListWrapper>
+
+                <ListWrapper>
+                    <h2>Edukacja</h2>
+                    <ul style={{'list-style-type': 'none', 'padding': 0, 'margin': 0}}>
+                        <li><b>Informatyka Stosowana</b></li>
+                        <li style={{color: '#919191'}}>PWSZ w Tarnowie</li>
+                        <li style={{color: '#919191'}}>2019 - obecnie</li>
+                    </ul>
+                </ListWrapper>
+            </HomeTextWrapper>
         </Container>
     )
 }

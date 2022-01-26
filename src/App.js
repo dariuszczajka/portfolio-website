@@ -2,6 +2,7 @@ import Home from './components/layouts/Home.tsx';
 import Navbar from './components/Navbar.tsx';
 import styled from 'styled-components';
 import './App.css';
+import {useState} from "react";
 
 const Root = styled.div`
     background-color: #13171C;
@@ -14,10 +15,12 @@ const Root = styled.div`
 `;
 
 function App() {
+  const [swiper, setSwiper] = useState(0);
   return (
     <Root>
-      <Navbar/>
-      <Home/>
+      <Navbar props={swiper}/>
+        <p>{swiper}</p>
+      <Home props={swiper}/>
     </Root>
   );
 }
