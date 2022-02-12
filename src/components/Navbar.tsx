@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Navbar = ({swiper, setSwiper}) => {
+const Navbar = (props) => {
     const Wrapper = styled.div`
       width: 100%;
       height: 7%;
@@ -18,14 +18,13 @@ const Navbar = ({swiper, setSwiper}) => {
 
     return(
         <Wrapper>
-                <h3>Dariusz Czajka</h3>
+                <h3 style={{cursor: "pointer"}} onClick={() => props.swipe(0)}>Dariusz Czajka</h3>
             <Content>
-                <button onClick={() => {
-                }}>O mnie</button>
-                <p>Technologie</p>
-                <p>Projekty</p>
-                <p>Korepetycje</p>
-                <p>Kontakt</p>
+                <p style={{cursor: "pointer"}} onClick={() => props.swipe(0)}>O mnie</p>
+                <p style={{cursor: "pointer"}} onClick={() => props.swipe(1)}>Technologie</p>
+                <p style={{cursor: "pointer"}} onClick={() => props.swipe(2)}>Projekty</p>
+                <p style={{cursor: "pointer"}} onClick={() => props.swipe(3)}>Korepetycje</p>
+                <p style={{cursor: "pointer"}} onClick={() => props.swipe(4)}>Kontakt</p>
             </Content>
         </Wrapper>
     )
