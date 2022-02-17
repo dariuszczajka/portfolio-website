@@ -1,13 +1,14 @@
 import * as React from "react";
 import "swiper/css";
 import "swiper/css/pagination"
-import Navbar from './components/Navbar.tsx';
+import Navbar from './components/Navbar.jsx';
 import styled from 'styled-components';
 import './App.css';
 import {useState} from "react";
 import SwiperCore, {Mousewheel, Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
-import Hello from "./components/layouts/Hello.tsx";
+import Hello from "./components/layouts/Hello.jsx";
+import Skills from "./components/layouts/Skills";
 
 const Root = styled.div`
     background-color: #13171C;
@@ -43,7 +44,7 @@ function App() {
                 simulateTouch={true}
             >
                 <SwiperSlide><Hello/></SwiperSlide>
-                <SwiperSlide>2</SwiperSlide>
+                <SwiperSlide><Skills/></SwiperSlide>
                 <SwiperSlide>Slide 3</SwiperSlide>
                 <SwiperSlide>Slide 4</SwiperSlide>
                 <SwiperSlide>Slide 5</SwiperSlide>
