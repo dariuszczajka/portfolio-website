@@ -9,6 +9,8 @@ import postgre from "../../resources/logos/postgre.svg";
 import react from "../../resources/logos/react.svg";
 import spring from "../../resources/logos/spring.svg";
 import trello from "../../resources/logos/trello.svg";
+import {useState} from "react";
+import _ from 'lodash'
 
 const Container = styled.div`
       width: 80%;
@@ -21,63 +23,101 @@ const Container = styled.div`
 const TextWrapper = styled.div`
       margin-top: 5%;
       flex-direction: row;
-      width: 25%;
+      width: 40%;
     `;
 
-const CircleWrapper = styled.div`
-      margin-left: 5%;
-      margin-right: 15%;
+const CircleWrapper = styled.div`;
       width:80%;
     `;
-
-const Circle = styled.img`
-  border-radius: 50%;
-  width: 5%;
-  height: 5%;
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  margin: -15px;
-`;
 
 const SkillName = styled.p`
       text-indent: 1.5em;
       color: #919191;
+      cursor: pointer;
     `;
 
+
+const arrayOfSkills = [html, css, js, react, java, spring, mongo, postgre, git, trello]
+const frontendSkills = ["HTML", "CSS", "JavaScript", "React.js"]
+const backendSkills = ["Java", "Spring", "Mongo", "PostgreSQL"]
+const otherSkills = ["Git", "Trello"]
+const arrayOfSkillsString = frontendSkills.concat(backendSkills).concat(otherSkills)
+
 const Skills = () => {
+
+    const [indexOfSkill, setIndexOfSkill] = useState(null)
 
     return(
         <Container>
             <TextWrapper>
                 <h1>Skills</h1>
                 <h3 style={{color: '#919191'}}>Frontend</h3>
-                    <SkillName>HTML</SkillName>
-                    <SkillName>CSS</SkillName>
-                    <SkillName>JavaScript</SkillName>
-                    <SkillName>React.js</SkillName>
+                {frontendSkills.map((skill) => {
+                    return(
+                        <SkillName
+                            onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
+                            onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
+                            {skill}
+                        </SkillName>
+                    )
+                })}
                 <h3 style={{color: '#919191'}}>Backend</h3>
-                    <SkillName>Java</SkillName>
-                    <SkillName>Spring</SkillName>
-                    <SkillName>MongoDB</SkillName>
-                    <SkillName>SQL</SkillName>
+                {backendSkills.map((skill) => {
+                    return(
+                        <SkillName
+                            onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
+                            onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
+                            {skill}
+                        </SkillName>
+                    )
+                })}
                 <h3 style={{color: '#919191'}}>Tools</h3>
-                    <SkillName>Git</SkillName>
-                    <SkillName>Trello</SkillName>
+                {otherSkills.map((skill) => {
+                    return(
+                        <SkillName
+                            onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
+                            onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
+                            {skill}
+                        </SkillName>
+                    )
+                })}
             </TextWrapper>
             <CircleWrapper>
-                    <Circle src={css} style={{transform: 'rotate(0deg) translate(130px)'}}/>
-                    <Circle src={git} style={{transform: 'rotate(-36deg) translate(130px)'}}/>
-                    <Circle src={html} style={{transform: 'rotate(-72deg) translate(130px)'}}/>
-                    <Circle src={java} style={{transform: 'rotate(-108deg) translate(130px)'}}/>
-                    <Circle src={js} style={{transform: 'rotate(-144deg) translate(130px)'}}/>
-                    <Circle src={mongo} style={{transform: 'rotate(-180deg) translate(130px)'}}/>
-                    <Circle src={postgre} style={{transform: 'rotate(-216deg) translate(130px)'}}/>
-                    <Circle src={react} style={{transform: 'rotate(-252deg) translate(130px)'}}/>
-                    <Circle src={spring} style={{transform: 'rotate(-288deg) translate(130px)'}}/>
-                    <Circle src={trello} style={{transform: 'rotate(-324deg) translate(130px)'}}/>
+                {arrayOfSkills.map((skill) => {
+                    let circleStyle = {
+                        transform: 'rotate(-' + (arrayOfSkills.indexOf(skill) * (360 / arrayOfSkills.length)) + 'deg) translate(230px)',
+                        width: '10%',
+                        height: '10%',
+                        position: 'absolute',
+                        top: '50%',
+                        left: '65%',
+                        margin: '-15px'
+                    }
+
+                    let imageStyle = {
+                        transform: 'rotate(' + (arrayOfSkills.indexOf(skill) * (360 / arrayOfSkills.length)) + 'deg)'
+                    }
+
+                    let grey = {
+                        filter: 'grayscale(100%)',
+                        width: '80%',
+                        height: '80%',
+                    }
+
+                    let color = {
+                        filter: 'none',
+                        width: '100%',
+                        height: '100%',
+                    }
+
+                    return(
+                        <div style={circleStyle}>
+                            <img src={skill} style={_.merge(imageStyle, arrayOfSkills.indexOf(skill) === indexOfSkill ? color : grey)}
+                                 onMouseEnter={() => setIndexOfSkill(arrayOfSkills.indexOf(skill))}
+                                 onMouseLeave={() => setIndexOfSkill(arrayOfSkills.indexOf(skill))}/>
+                        </div>
+                    )
+                })}
             </CircleWrapper>
         </Container>
     )

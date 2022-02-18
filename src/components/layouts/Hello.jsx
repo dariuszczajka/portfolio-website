@@ -67,7 +67,7 @@ const Hello = () => {
                         .typeString("Korepetytor")
                         .pauseFor(1000)
                         .deleteAll()
-                        .typeString("<b>Przyszły fullstack developer.</b>")
+                        .typeString("<b>Web development enthusiast.</b>")
                         .pauseFor(5000)
                         .start();
                 }
