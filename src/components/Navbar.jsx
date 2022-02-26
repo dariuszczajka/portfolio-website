@@ -23,8 +23,7 @@ const Navbar = (props) => {
                 <p style={{cursor: "pointer"}} onClick={() => props.swipe(0)}>O mnie</p>
                 <p style={{cursor: "pointer"}} onClick={() => props.swipe(1)}>Technologie</p>
                 <p style={{cursor: "pointer"}} onClick={() => props.swipe(2)}>Projekty</p>
-                <p style={{cursor: "pointer"}} onClick={() => props.swipe(3)}>Korepetycje</p>
-                <p style={{cursor: "pointer"}} onClick={() => props.swipe(4)}>Kontakt</p>
+                <p style={{cursor: "pointer"}} onClick={() => props.swipe(3)}>Kontakt</p>
             </Content>
         </Wrapper>
     )

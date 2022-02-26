@@ -11,30 +11,31 @@ import spring from "../../resources/logos/spring.svg";
 import trello from "../../resources/logos/trello.svg";
 import {useState} from "react";
 import _ from 'lodash'
+import './../../App.css';
 
 const Container = styled.div`
-      width: 80%;
-      display:flex;
-      margin-left: 20%;
-      margin-top: 2%;
-      margin-bottom: 5%;
-    `;
+  width: 80%;
+  display:flex;
+  margin-left: 20%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+`;
 
 const TextWrapper = styled.div`
-      margin-top: 5%;
-      flex-direction: row;
-      width: 40%;
-    `;
+  margin-top: 5%;
+  flex-direction: row;
+  width: 40%;
+`;
 
 const CircleWrapper = styled.div`;
-      width:80%;
-    `;
+  width:80%;
+`;
 
 const SkillName = styled.p`
-      text-indent: 1.5em;
-      color: #919191;
-      cursor: pointer;
-    `;
+  text-indent: 1.5em;
+  color: #919191;
+  cursor: pointer;
+`;
 
 
 const arrayOfSkills = [html, css, js, react, java, spring, mongo, postgre, git, trello]
@@ -89,7 +90,7 @@ const Skills = () => {
                         width: '10%',
                         height: '10%',
                         position: 'absolute',
-                        top: '50%',
+                        top: '40%',
                         left: '65%',
                         margin: '-15px'
                     }
@@ -112,7 +113,7 @@ const Skills = () => {
 
                     return(
                         <div style={circleStyle}>
-                            <img src={skill} style={_.merge(imageStyle, arrayOfSkills.indexOf(skill) === indexOfSkill ? color : grey)}
+                            <img className={'skills'} src={skill} style={_.merge(imageStyle, arrayOfSkills.indexOf(skill) === indexOfSkill ? color : grey)}
                                  onMouseEnter={() => setIndexOfSkill(arrayOfSkills.indexOf(skill))}
                                  onMouseLeave={() => setIndexOfSkill(arrayOfSkills.indexOf(skill))}/>
                         </div>

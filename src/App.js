@@ -9,6 +9,9 @@ import SwiperCore, {Mousewheel, Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import Hello from "./components/layouts/Hello.jsx";
 import Skills from "./components/layouts/Skills";
+import Projects from "./components/layouts/Projects";
+import Contact from "./components/layouts/Contact";
+
 
 const Root = styled.div`
     background-color: #13171C;
@@ -34,20 +37,18 @@ function App() {
         <>
             <Swiper
                 onSwiper={setSwiper}
-                style={{"height": "80%"}}
+                style={{"height": "90%"}}
                 direction={'vertical'}
                 slidesPerView='auto'
                 spaceBetween={30}
                 mousewheel={true}
                 pagination={{"clickable": true}}
                 className="mySwiper"
-                simulateTouch={true}
             >
                 <SwiperSlide><Hello/></SwiperSlide>
                 <SwiperSlide><Skills/></SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
+                <SwiperSlide><Projects/></SwiperSlide>
+                <SwiperSlide><Contact/></SwiperSlide>
             </Swiper>
         </>
     </Root>
