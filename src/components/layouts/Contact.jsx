@@ -123,19 +123,19 @@ const Contact = () => {
                     <SocialMediaWrapper>
                         <SocialMediaRow>
                             <FontAwesomeIcon icon="envelope" size="2x" style={{"color": "white"}} /><SocialMediaText>
-                            <a className={'hover-underline-animation'} href={"mailto:dczajka@tuta.io"} target={"_blank"}>dczajka@tuta.io</a></SocialMediaText>
+                            <a rel={'noreferrer'} className={'hover-underline-animation'} href={"mailto:dczajka@tuta.io"} target={"_blank"}>dczajka@tuta.io</a></SocialMediaText>
                         </SocialMediaRow>
                         <SocialMediaRow>
                             <FontAwesomeIcon icon={faPhone} size="2x" style={{"color": "white"}} /><SocialMediaText>
-                            <a className={'hover-underline-animation'} href={"tel:+48517974650"} target={"_blank"}>+48 517 974 650</a></SocialMediaText>
+                            <a rel={'noreferrer'} className={'hover-underline-animation'} href={"tel:+48517974650"} target={"_blank"}>+48 517 974 650</a></SocialMediaText>
                         </SocialMediaRow>
                         <SocialMediaRow>
                             <FontAwesomeIcon icon={faGithub} size="2x" style={{"color": "white"}} /><SocialMediaText>
-                            <a className={'hover-underline-animation'} href={"https://github.com/dariuszczajka"} target={"_blank"}>dariuszczajka</a></SocialMediaText>
+                            <a rel={'noreferrer'} className={'hover-underline-animation'} href={"https://github.com/dariuszczajka"} target={"_blank"}>dariuszczajka</a></SocialMediaText>
                         </SocialMediaRow>
                         <SocialMediaRow>
                             <FontAwesomeIcon icon={faLinkedin} size="2x" style={{"color": "white"}} /><SocialMediaText>
-                            <a className={'hover-underline-animation'} href={"https://www.linkedin.com/in/dariuszczajka/"} target={"_blank"}>Dariusz Czajka</a></SocialMediaText>
+                            <a rel={'noreferrer'} className={'hover-underline-animation'} href={"https://www.linkedin.com/in/dariuszczajka/"} target={"_blank"}>Dariusz Czajka</a></SocialMediaText>
                         </SocialMediaRow>
                     </SocialMediaWrapper>
                     <ContactFormWrapper>

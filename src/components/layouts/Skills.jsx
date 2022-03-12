@@ -116,7 +116,7 @@ const Skills = () => {
 
                     return(
                         <div style={circleStyle}>
-                            <img className={'skills'} src={skill} style={_.merge(imageStyle, arrayOfSkills.indexOf(skill) === indexOfSkill ? color : grey)}
+                            <img className={'skills'} alt={'skill'} src={skill} style={_.merge(imageStyle, arrayOfSkills.indexOf(skill) === indexOfSkill ? color : grey)}
                                  onMouseEnter={() => setIndexOfSkill(arrayOfSkills.indexOf(skill))}
                                  onMouseLeave={() => setIndexOfSkill(arrayOfSkills.indexOf(skill))}/>
                         </div>

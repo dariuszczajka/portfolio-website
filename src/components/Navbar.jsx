@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import { ReactComponent as CloseMenu } from "../resources/assets/cross.svg";
 import { ReactComponent as MenuIcon } from "../resources/assets/menu.svg";
 
