@@ -51,7 +51,7 @@ const Skills = () => {
     return(
         <Container>
             <TextWrapper>
-                <h1>Skills</h1>
+                <h1>Technologie</h1>
                 <h3 style={{color: '#919191'}}>Frontend</h3>
                 {frontendSkills.map((skill) => {
                     return(

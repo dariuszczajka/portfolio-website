@@ -21,31 +21,31 @@ const Projects = () => {
 
     return(
         <Container>
-            <h1>Projects</h1>
+            <h1>Projekty</h1>
             <ProjectWrapper>
                 <ListProject
                     title={"pizzaDEVourers"}
                     author={"Dariusz Czajka, Dominik Sęk"}
-                    desc={"Lorem ipsum dolor sit amet."}
+                    desc={"Aplikacja klient-serwer obsługująca restaurację."}
                     github={"https://github.com/dariuszczajka/pizzaDEVourers-server"}
+                />
+                <ListProject
+                    title={"Strona portfolio"}
+                    author={"Dariusz Czajka"}
+                    desc={"Strona którą aktualnie odwiedzasz - ciągle w rozbudowie."}
+                    github={"https://github.com/dariuszczajka/portfolio-website"}
+                />
+                <ListProject
+                    title={"Chat app"}
+                    author={"Dariusz Czajka, Dominik Sęk"}
+                    desc={"Komunikator sieciowy na urządzenia mobilne, napisany w technologii React Native."}
+                    github={"https://github.com/dariuszczajka"}
                 />
                 <ListProject
                     title={"Movie database"}
                     author={"Dariusz Czajka"}
-                    desc={"Lorem ipsum dolor sit amet."}
+                    desc={"Baza filmów posiadająca podstawowe funkcjonalności."}
                     github={"https://github.com/dariuszczajka/baza-filmow"}
-                />
-                <ListProject
-                    title={"pizzaDEVourers"}
-                    author={"Dariusz Czajka, Dominik Sęk"}
-                    desc={"Lorem ipsum dolor sit amet."}
-                    github={"https://github.com/dariuszczajka/pizzaDEVourers-server"}
-                />
-                <ListProject
-                    title={"pizzaDEVourers"}
-                    author={"Dariusz Czajka, Dominik Sęk"}
-                    desc={"Lorem ipsum dolor sit amet."}
-                    github={"https://github.com/dariuszczajka/pizzaDEVourers-server"}
                 />
             </ProjectWrapper>
         </Container>

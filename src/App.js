@@ -11,7 +11,7 @@ import Hello from "./components/layouts/Hello.jsx";
 import Skills from "./components/layouts/Skills";
 import Projects from "./components/layouts/Projects";
 import Contact from "./components/layouts/Contact";
-
+import { useMediaQuery } from 'react-responsive';
 
 const Root = styled.div`
     background-color: #13171C;
@@ -26,6 +26,7 @@ const Root = styled.div`
 function App() {
   SwiperCore.use([Mousewheel,Pagination, Navigation]);
   const [swiper, setSwiper] = useState(0);
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   function swipe(slide){
       swiper.slideTo(slide);

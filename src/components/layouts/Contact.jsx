@@ -106,30 +106,34 @@ const Contact = () => {
                 <ContactWrapper>
                     <SocialMediaWrapper>
                         <SocialMediaRow>
-                            <FontAwesomeIcon icon="envelope" size="2x" style={{"color": "white"}} /><SocialMediaText>dczajka@tuta.io</SocialMediaText>
+                            <FontAwesomeIcon icon="envelope" size="2x" style={{"color": "white"}} /><SocialMediaText>
+                            <a className={'hover-underline-animation'} href={"mailto:dczajka@tuta.io"} target={"_blank"}>dczajka@tuta.io</a></SocialMediaText>
                         </SocialMediaRow>
                         <SocialMediaRow>
-                            <FontAwesomeIcon icon={faPhone} size="2x" style={{"color": "white"}} /><SocialMediaText>+48 517 974 650</SocialMediaText>
+                            <FontAwesomeIcon icon={faPhone} size="2x" style={{"color": "white"}} /><SocialMediaText>
+                            <a className={'hover-underline-animation'} href={"tel:+48517974650"} target={"_blank"}>+48 517 974 650</a></SocialMediaText>
                         </SocialMediaRow>
                         <SocialMediaRow>
-                            <FontAwesomeIcon icon={faGithub} size="2x" style={{"color": "white"}} /><SocialMediaText>dariuszczajka</SocialMediaText>
+                            <FontAwesomeIcon icon={faGithub} size="2x" style={{"color": "white"}} /><SocialMediaText>
+                            <a className={'hover-underline-animation'} href={"https://github.com/dariuszczajka"} target={"_blank"}>dariuszczajka</a></SocialMediaText>
                         </SocialMediaRow>
                         <SocialMediaRow>
-                            <FontAwesomeIcon icon={faLinkedin} size="2x" style={{"color": "white"}} /><SocialMediaText>Dariusz Czajka</SocialMediaText>
+                            <FontAwesomeIcon icon={faLinkedin} size="2x" style={{"color": "white"}} /><SocialMediaText>
+                            <a className={'hover-underline-animation'} href={"https://www.linkedin.com/in/dariuszczajka/"} target={"_blank"}>Dariusz Czajka</a></SocialMediaText>
                         </SocialMediaRow>
                     </SocialMediaWrapper>
                     <ContactFormWrapper>
                         <Form onSubmit={() => handleSubmit}>
                             <FormUserWrapper>
                                 <FormUserInfo>
-                                    <FormInput type="text" placeholder={"Name"} value={name} onChange={setName} />
+                                    <FormInput type="text" disabled placeholder={"Name"} value={name} onChange={setName} />
                                 </FormUserInfo>
                                 <FormUserInfo>
-                                    <FormInput type="text" placeholder={"Email"} value={email} onChange={setEmail} />
+                                    <FormInput type="text" disabled placeholder={"Email"} value={email} onChange={setEmail} />
                                 </FormUserInfo>
                             </FormUserWrapper>
                             <label>
-                                <FormMessageInput type="textarea" placeholder={"Message"} value={message} onChange={setMessage} />
+                                <FormMessageInput type="textarea" disabled placeholder={"Message"} value={message} onChange={setMessage} />
                             </label>
                             <SubmitBtn type="submit" value="Wyślij" />
                         </Form>

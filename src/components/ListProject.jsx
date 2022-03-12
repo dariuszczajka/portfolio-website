@@ -34,6 +34,7 @@ const Title= styled.h3`
 const Author = styled.div`
   margin: 0 0 5px 5px;
 `;
+
 const ListProject = (props) => {
     return(
         <Root>

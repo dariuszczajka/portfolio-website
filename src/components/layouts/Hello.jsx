@@ -16,6 +16,10 @@ const Hello = () => {
       margin-left: 20%;
       margin-top: 5%;
       margin-bottom: 5%;
+      @media (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+      }
     `;
 
     const AvatarWrapper = styled.div`
@@ -88,24 +92,24 @@ const Hello = () => {
             </AvatarWrapper>
 
             <HomeTextWrapper>
-                <h1 >Cześć <span className={'wave'}>👋</span></h1>
+                <h1 >Cześć! <span className={'wave'}>👋</span></h1>
                 <p>Nazywam się Darek i jestem studentem III roku informatyki na PWSZ w Tarnowie. Zawodowo jestem związany z firmą strefakursow.pl, gdzie pracuję na stanowisku doradcy jakości-moje zadanie polega głównie na kontroli przesyłanych kursów pod kątem merytorycznym i technicznym.</p>
                 <p>Po godzinach udzielam się jako korepetytor z szeroko pojętego zakresu informatyki i programowania. </p>
-                <p>Uważam się za osobę odpowiedzialną, zawziętą i upartą w dążeniu do celu; a nim jest rozpoczęcie kariery w sektorze IT.</p>
+
+                <p>Jestem osobą odpowiedzialną, zawziętą i upartą w dążeniu do celu; a nim jest rozpoczęcie kariery w sektorze IT.</p>
 
                 <p>Dlaczego akurat ja? Pomimo braku komercyjnego doświadczenia, praca w sektorze e-learningowym sprawia, że ciągle wszechstronnie się rozwijam. W firmie poznałem wiele narzędzi, metodyki pracy programistów czy choćby zasad czystego kodu, co w połączeniu ze znajomością paradygmatów oraz języków programowania powinno stanowić solidną podstawę do dalszego rozwoju w sektorze IT.</p>
 
                 <p>
-                    Jestem otwarty na nowe możliwości-jeżeli Cię zainteresowałem, to skontaktuj się ze mną poprzez LinkedIn lub mailowo.
+                    Jestem otwarty na nowe możliwości - jeżeli Cię zainteresowałem, to skontaktuj się ze mną poprzez LinkedIn lub mailowo.
                 </p>
 
                 <ListWrapper>
                     <h2>Zainteresowania</h2>
                     <ul>
-                        <li>Software Engineering</li>
                         <li>Web development</li>
-                        <li>New technologies</li>
-                        <li>Personal Growth</li>
+                        <li>Nowe technologie</li>
+                        <li>Rozwój osobisty</li>
                     </ul>
                 </ListWrapper>
 
@@ -113,7 +117,7 @@ const Hello = () => {
                     <h2>Edukacja</h2>
                     <ul style={{'list-style-type': 'none', 'padding': 0, 'margin': 0}}>
                         <li><b>Informatyka Stosowana</b></li>
-                        <li style={{color: '#919191'}}>PWSZ w Tarnowie</li>
+                        <li style={{color: '#919191'}}>ANS w Tarnowie</li>
                         <li style={{color: '#919191'}}>2019 - obecnie</li>
                     </ul>
                 </ListWrapper>
