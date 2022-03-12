@@ -7,7 +7,8 @@ const Root = styled.div`
   padding: 0;
   width: 100%;
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const Desc = styled.p`
@@ -35,15 +36,37 @@ const Author = styled.div`
   margin: 0 0 5px 5px;
 `;
 
+const Text = styled.div`
+  flex-direction: column;
+`;
+
+
+const ImageWrapper = styled.div`
+    max-width: 12em;
+`;
+
+const Image = styled.img`
+  max-width: inherit;
+  @media (max-width: 768px){
+    max-width: 6em;
+    height: 4em;
+  }
+`;
+
 const ListProject = (props) => {
     return(
         <Root>
-            <Title>{props.title}</Title>
-            <Author>{props.author}</Author>
-            <Desc>{props.desc}</Desc>
-            <GithubBtn href={props.github}>
-                <FontAwesomeIcon icon={faGithub} style={{"color": "white"}}/><p>Code</p>
-            </GithubBtn>
+            <Text>
+                <Title>{props.title}</Title>
+                <Author>{props.author}</Author>
+                <Desc>{props.desc}</Desc>
+                <GithubBtn href={props.github}>
+                    <FontAwesomeIcon icon={faGithub} style={{"color": "white"}}/><p>Code</p>
+                </GithubBtn>
+            </Text>
+            <ImageWrapper>
+                <Image src={props.img}/>
+            </ImageWrapper>
         </Root>
     )
 }

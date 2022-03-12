@@ -8,9 +8,12 @@ import Footer from "../Footer";
 
 const Container = styled.div`
   width: 80%;
-  margin-left: 20%;
   margin-top: 4%;
-  margin-bottom: 5%;
+  margin-bottom: 20%;
+  margin-left: 20%;
+  @media(max-width: 768px){
+    margin-left: 5%;
+  }
 `;
 
 const ContactWrapper = styled.div`
@@ -23,7 +26,7 @@ const ContactWrapper = styled.div`
 `;
 
 const SocialMediaWrapper = styled.div`
-  width: 40%;
+  min-width: 40%;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -34,11 +37,19 @@ const ContactFormWrapper = styled.div`
   width: 60%;
   display: flex;
   flex-direction: column;
+  
+  @media(max-width: 768px)
+  {
+    display: none;
+  }
 `;
 
 const SocialMediaRow = styled.div`
   display: flex;
   flex-direction: row;
+  @media(max-width: 768px)
+  {
+  }
 `;
 
 const SocialMediaText = styled.h4`
@@ -89,6 +100,11 @@ const SubmitBtn = styled.input`
   color: white;
   border: 1px solid #F87060;
 `;
+
+const Title = styled.h1`
+  display: flex;
+  height: auto;
+`;
 const Contact = () => {
 
     const [name, setName] = useState(null)
@@ -102,7 +118,7 @@ const Contact = () => {
     return(
         <>
             <Container>
-                <h1>Contact Me!</h1>
+                <Title>Contact Me!</Title>
                 <ContactWrapper>
                     <SocialMediaWrapper>
                         <SocialMediaRow>

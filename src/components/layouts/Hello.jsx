@@ -12,13 +12,15 @@ const Hello = () => {
 
     const Container = styled.div`
       width: 80%;
+      min-height: 100%;
       display:flex;
-      margin-left: 20%;
-      margin-top: 5%;
-      margin-bottom: 5%;
+      margin: 5% 0 20% 10%;
       @media (max-width: 768px){
+        width: 100%;
+        margin: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
       }
     `;
 
@@ -26,6 +28,12 @@ const Hello = () => {
       margin-top: 5%;
       flex-direction: column;
       width: 25%;
+      @media(max-width: 768px){
+        width: 90%;
+        margin: 10% 5% 0 5%;
+        display: flex;
+        justify-content: center;
+      }
     `;
 
     const SocialMediaBox = styled.div`
@@ -33,12 +41,13 @@ const Hello = () => {
       width: 100%;
       display: inline-flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 10%;
     `;
 
     const SocialMediaButton = styled.a`
-      width: 50px;
-      height: 50px;
+      width: auto;
+      height: auto;
     `;
 
     const HomeTextWrapper = styled.div`
@@ -53,12 +62,23 @@ const Hello = () => {
       vertical-align: top;
     `;
 
+    const Image = styled.img`
+      border-radius: 50%;
+      width: 100%;
+      @media(max-width: 768px){
+        width: 50%;
+        
+      }
+    `;
+
+    const Title = styled.h1`
+      text-align: center;
+    `;
     return(
         <Container>
             <AvatarWrapper>
-                <img src={"https://media-exp1.licdn.com/dms/image/C4E03AQEgp7xJlwWGJA/profile-displayphoto-shrink_800_800/0/1616599262595?e=1648684800&v=beta&t=tNoxSPfNpLwr1huoalMiDYwz-bhYdKEb3fSe6Pj027k"}
-                     style={{"borderRadius": "50%", "width": "100%"}}/>
-                <h1>Dariusz Czajka</h1>
+                <Image src={"https://media-exp1.licdn.com/dms/image/C4E03AQEgp7xJlwWGJA/profile-displayphoto-shrink_800_800/0/1616599262595?e=1648684800&v=beta&t=tNoxSPfNpLwr1huoalMiDYwz-bhYdKEb3fSe6Pj027k"}/>
+                <Title>Dariusz Czajka</Title>
                 <Typewriter onInit={(typewriter) => {
                     typewriter
                         .changeDelay(50)
@@ -92,6 +112,7 @@ const Hello = () => {
             </AvatarWrapper>
 
             <HomeTextWrapper>
+                {/*
                 <h1 >Cześć! <span className={'wave'}>👋</span></h1>
                 <p>Nazywam się Darek i jestem studentem III roku informatyki na PWSZ w Tarnowie. Zawodowo jestem związany z firmą strefakursow.pl, gdzie pracuję na stanowisku doradcy jakości-moje zadanie polega głównie na kontroli przesyłanych kursów pod kątem merytorycznym i technicznym.</p>
                 <p>Po godzinach udzielam się jako korepetytor z szeroko pojętego zakresu informatyki i programowania. </p>
@@ -102,6 +123,19 @@ const Hello = () => {
 
                 <p>
                     Jestem otwarty na nowe możliwości - jeżeli Cię zainteresowałem, to skontaktuj się ze mną poprzez LinkedIn lub mailowo.
+                </p>
+*/}
+
+                <h1 >Cześć! <span className={'wave'}>👋</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, est ut consectetur ultricies, libero mi volutpat sapien, ac tincidunt tellus enim luctus velit.</p>
+                <p>Nullam convallis fermentum augue auctor faucibus. Maecenas hendrerit condimentum nibh at tempor. Morbi pretium, massa </p>
+
+                <p>hasellus viverra mi orci, sed mollis velit tincidunt id. Etiam volutpat imperdiet nisi, eu maximus dolor ultrices sit amet.</p>
+
+                <p>hasellus viverra mi orci, sed mollis velit tincidunt id. Etiam volutpat imperdiet nisi, eu maximus dolor ultrices sit amet.</p>
+
+                <p>
+                    hasellus viverra mi orci, sed mollis velit tincidunt id. Etiam volutpat imperdiet nisi, eu maximus dolor ultrices sit amet.
                 </p>
 
                 <ListWrapper>

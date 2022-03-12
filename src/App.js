@@ -19,7 +19,6 @@ const Root = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     color: aliceblue;
 `;
 
@@ -33,6 +32,7 @@ function App() {
   }
 
   return (
+      /*
     <Root>
       <Navbar swipe={swipe}/>
         <>
@@ -53,6 +53,14 @@ function App() {
             </Swiper>
         </>
     </Root>
+       */
+      <Root>
+          <Navbar/>
+          <Hello/>
+          <Skills/>
+          <Projects/>
+          <Contact/>
+      </Root>
   );
 }
 

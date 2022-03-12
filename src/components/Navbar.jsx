@@ -6,10 +6,12 @@ import { ReactComponent as MenuIcon } from "../resources/assets/menu.svg";
 const Navbar = (props) => {
     const Wrapper = styled.nav`
       width: 100%;
-      height: 7%;
+      height: 6%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      position: fixed;
+      background-color: #13171C;
     `;
 
     const Content = styled.ul`

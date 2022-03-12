@@ -18,7 +18,7 @@ const Container = styled.div`
   display:flex;
   margin-left: 20%;
   margin-top: 2%;
-  margin-bottom: 5%;
+  margin-bottom: 15%;
 `;
 
 const TextWrapper = styled.div`
@@ -27,8 +27,13 @@ const TextWrapper = styled.div`
   width: 40%;
 `;
 
-const CircleWrapper = styled.div`;
+const CircleWrapper = styled.div`
   width:80%;
+  
+  @media(max-width: 768px){
+    display: none;
+    width: 0;
+  }
 `;
 
 const SkillName = styled.p`
@@ -90,7 +95,7 @@ const Skills = () => {
                         width: '10%',
                         height: '10%',
                         position: 'absolute',
-                        top: '40%',
+                        top: '32%',
                         left: '65%',
                         margin: '-15px'
                     }
@@ -101,14 +106,12 @@ const Skills = () => {
 
                     let grey = {
                         filter: 'grayscale(100%)',
-                        width: '80%',
-                        height: '80%',
+                        width: '4rem',
                     }
 
                     let color = {
                         filter: 'none',
-                        width: '100%',
-                        height: '100%',
+                        width: '4.5rem',
                     }
 
                     return(
