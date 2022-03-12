@@ -3,3 +3,79 @@
 body{
   font-family: 'Quicksand', light;
 }
+
+@media (max-width: 768px) {
+  body{
+    font-size: 3vw;
+  }
+}
+
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: 3;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(16.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(16.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(12.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.hover-underline-animation {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-animation {
+  color: #fff;
+  text-decoration: none;
+
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-animation:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navbar-animation:hover:after {
+  width: 100%;
+  left: 0;
+}
