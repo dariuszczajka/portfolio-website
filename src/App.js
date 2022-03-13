@@ -8,6 +8,7 @@ import Hello from "./components/layouts/Hello.jsx";
 import Skills from "./components/layouts/Skills";
 import Projects from "./components/layouts/Projects";
 import Contact from "./components/layouts/Contact";
+import NavProvider from "./context/NavContext";
 
 const Root = styled.div`
     background-color: #13171C;
@@ -22,11 +23,13 @@ function App() {
 
   return (
       <Root>
-          <Navbar/>
-          <Hello/>
-          <Skills/>
-          <Projects/>
-          <Contact/>
+          <NavProvider>
+              <Navbar/>
+              <Hello/>
+              <Skills/>
+              <Projects/>
+              <Contact/>
+          </NavProvider>
       </Root>
   );
 }

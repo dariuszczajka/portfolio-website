@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Footer = () => {
-    const Wrapper = styled.div`
+    const Wrapper = styled.footer`
       width: 100%;
-      height: 2%;
+      height: 1%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;

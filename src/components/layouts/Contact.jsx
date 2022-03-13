@@ -5,14 +5,16 @@ import { faPhone } from '@fortawesome/fontawesome-free-solid'
 
 import {useState} from "react";
 import Footer from "../Footer";
+import {useNav} from "../UseNav";
 
-const Container = styled.div`
+const Container = styled.section`
   width: 80%;
   margin-top: 4%;
   margin-bottom: 20%;
   margin-left: 20%;
   @media(max-width: 768px){
-    margin-left: 5%;
+    width: 95%;
+    margin: 10% 0 20% 5%;
   }
 `;
 
@@ -23,6 +25,10 @@ const ContactWrapper = styled.div`
   gap: 30px;  
   flex-direction: row;
   justify-content: center;
+  @media(max-width: 768px){
+    width: 95%;
+  }
+
 `;
 
 const SocialMediaWrapper = styled.div`
@@ -31,6 +37,9 @@ const SocialMediaWrapper = styled.div`
   flex-direction: column;
   gap: 50px;
   padding: 15px 0 0 30px;
+  @media(max-width: 768px){
+    padding: 0;
+  }
 `;
 
 const ContactFormWrapper = styled.div`
@@ -105,7 +114,12 @@ const Title = styled.h1`
   display: flex;
   height: auto;
 `;
+
+
+
 const Contact = () => {
+
+    const contactRef = useNav('Contact');
 
     const [name, setName] = useState(null)
     const [email, setEmail] = useState(null)
@@ -117,8 +131,8 @@ const Contact = () => {
 
     return(
         <>
-            <Container>
-                <Title>Contact Me!</Title>
+            <Container ref={contactRef} id={'contactContainer'}>
+                <Title>Kontakt</Title>
                 <ContactWrapper>
                     <SocialMediaWrapper>
                         <SocialMediaRow>
@@ -149,9 +163,9 @@ const Contact = () => {
                                 </FormUserInfo>
                             </FormUserWrapper>
                             <label>
-                                <FormMessageInput type="textarea" disabled placeholder={"Message"} value={message} onChange={setMessage} />
+                                <FormMessageInput type="textarea" disabled placeholder={"currently disabled"} value={message} onChange={setMessage} />
                             </label>
-                            <SubmitBtn type="submit" value="Wyślij" />
+                            <SubmitBtn disabled type="submit" value="Wyślij" />
                         </Form>
                     </ContactFormWrapper>
                 </ContactWrapper>

@@ -79,3 +79,12 @@ body{
   width: 100%;
   left: 0;
 }
+
+.Typewriter{
+  display: flex;
+  justify-content: center;
+}
+
+.activeClass {
+  border-bottom-color: #ffffff;
+}

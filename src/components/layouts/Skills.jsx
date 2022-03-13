@@ -12,24 +12,33 @@ import trello from "../../resources/logos/trello.svg";
 import {useState} from "react";
 import _ from 'lodash'
 import './../../App.css';
+import {useNav} from "../UseNav";
 
-const Container = styled.div`
+const Container = styled.section`
   width: 80%;
   display:flex;
   margin-left: 20%;
-  margin-top: 2%;
+  padding-top: 5%;
   margin-bottom: 15%;
+  @media (max-width: 768px){
+    width: 100%;
+    margin: 10% 0 30% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const TextWrapper = styled.div`
   margin-top: 5%;
-  flex-direction: row;
   width: 40%;
+  @media(max-width: 768px){
+    width: 100%;
+  }
 `;
 
 const CircleWrapper = styled.div`
   width:80%;
-  
   @media(max-width: 768px){
     display: none;
     width: 0;
@@ -42,6 +51,28 @@ const SkillName = styled.p`
   cursor: pointer;
 `;
 
+const Title = styled.h1`
+  @media(max-width: 768px){
+    text-align: center;
+  }
+`;
+
+const SkillGroupName = styled.h3`
+  color: #919191;
+  @media(max-width: 768px){
+    padding-top: 3%;
+    text-align: center;
+  }
+`;
+
+const SkillsWrapper = styled.div`
+  @media(max-width: 768px){
+    margin-left: -2em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+`;
 
 const arrayOfSkills = [html, css, js, react, java, spring, mongo, postgre, git, trello]
 const frontendSkills = ["HTML", "CSS", "JavaScript", "React.js"]
@@ -52,41 +83,48 @@ const arrayOfSkillsString = frontendSkills.concat(backendSkills).concat(otherSki
 const Skills = () => {
 
     const [indexOfSkill, setIndexOfSkill] = useState(null)
+    const skillsRef = useNav('Contact');
 
     return(
-        <Container>
+        <Container ref={skillsRef} id={'skillsContainer'}>
             <TextWrapper>
-                <h1>Technologie</h1>
-                <h3 style={{color: '#919191'}}>Frontend</h3>
-                {frontendSkills.map((skill) => {
-                    return(
-                        <SkillName
-                            onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
-                            onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
-                            {skill}
-                        </SkillName>
-                    )
-                })}
-                <h3 style={{color: '#919191'}}>Backend</h3>
-                {backendSkills.map((skill) => {
-                    return(
-                        <SkillName
-                            onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
-                            onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
-                            {skill}
-                        </SkillName>
-                    )
-                })}
-                <h3 style={{color: '#919191'}}>Tools</h3>
-                {otherSkills.map((skill) => {
-                    return(
-                        <SkillName
-                            onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
-                            onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
-                            {skill}
-                        </SkillName>
-                    )
-                })}
+                <Title>Technologie</Title>
+                <SkillGroupName>Frontend</SkillGroupName>
+                <SkillsWrapper>
+                    {frontendSkills.map((skill) => {
+                        return(
+                            <SkillName
+                                onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
+                                onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
+                                {skill}
+                            </SkillName>
+                        )
+                    })}
+                </SkillsWrapper>
+                <SkillGroupName>Backend</SkillGroupName>
+                <SkillsWrapper>
+                    {backendSkills.map((skill) => {
+                        return(
+                            <SkillName
+                                onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
+                                onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
+                                {skill}
+                            </SkillName>
+                        )
+                    })}
+                </SkillsWrapper>
+                <SkillGroupName>Narzędzia</SkillGroupName>
+                <SkillsWrapper>
+                    {otherSkills.map((skill) => {
+                        return(
+                            <SkillName
+                                onMouseEnter={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}
+                                onMouseLeave={() => setIndexOfSkill(arrayOfSkillsString.indexOf(skill))}>
+                                {skill}
+                            </SkillName>
+                        )
+                    })}
+                </SkillsWrapper>
             </TextWrapper>
             <CircleWrapper>
                 {arrayOfSkills.map((skill) => {
@@ -95,7 +133,7 @@ const Skills = () => {
                         width: '10%',
                         height: '10%',
                         position: 'absolute',
-                        top: '32%',
+                        top: '33%',
                         left: '65%',
                         margin: '-15px'
                     }
