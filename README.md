@@ -23,7 +23,7 @@
 
 ## Screenshots
 
-# Desktop
+### Desktop
 Chrome 98.0.4758.102 on Linux Mint 20.2
 
 ![Desktop 1](https://i.imgur.com/5oK9txR.png "Homepage")
@@ -34,11 +34,11 @@ Chrome 98.0.4758.102 on Linux Mint 20.2
 
 Safari 15 on iPhone 13
 
-![Mobile 1](https://imgur.com/Q9P0XZK.png "Homepage - mobile")
+<img src="https://imgur.com/Q9P0XZK.png" alt="Homepage - mobile" width="390" height="844"/>
 
-![Mobile 2](https://imgur.com/JDsWYHu.png "Skills page - mobile")
+<img src="https://imgur.com/JDsWYHu.png" alt="Skills page - mobile" width="390" height="844"/>
 
-![Mobile 3](https://imgur.com/2VA0dht.png "Projects page - mobile")
+<img src="https://imgur.com/2VA0dht.png" alt="Projects page - mobile" width="390" height="844"/>
 
 ## Project Status
 Project is: _in progress_ 
