@@ -4,13 +4,22 @@ import pizza from "../../resources/assets/pizza.png";
 import portfolio from "../../resources/assets/portfolio.png";
 import movies from "../../resources/assets/movies.jpeg";
 import chatApp from "../../resources/assets/chat-app.png";
+import {useNav} from "../UseNav";
 
 
-const Container = styled.div`
+const Container = styled.section`
   width: 80%;
   margin-left: 20%;
-  margin-top: 4%;
+  padding-top: 10%;
   margin-bottom: 15%;
+  @media (max-width: 768px){
+    width: 95%;
+    padding-top: 25%;
+    margin: 0 0 35% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const ProjectWrapper = styled.div`
@@ -18,13 +27,17 @@ const ProjectWrapper = styled.div`
   display: flex;
   gap: 30px;  
   flex-direction: column;
+  @media(max-width: 768px){
+    width: 90%;
+  }
 `;
 
 
 const Projects = () => {
+    const projectsRef = useNav('Projects');
 
     return(
-        <Container>
+        <Container ref={projectsRef} id={'projectsContainer'}>
             <h1>Projekty</h1>
             <ProjectWrapper>
                 <ListProject
@@ -43,9 +56,9 @@ const Projects = () => {
                 />
                 <ListProject
                     title={"Chat app"}
-                    author={"Dariusz Czajka, Dominik Sęk"}
+                    author={"Dariusz Czajka, Dominik Sęk, Wojeciech Sutkowski"}
                     desc={"Komunikator sieciowy na urządzenia mobilne, napisany w technologii React Native."}
-                    github={"https://github.com/dariuszczajka"}
+                    github={"https://github.com/gothic459/chat-app"}
                     img={chatApp}
                 />
                 <ListProject
