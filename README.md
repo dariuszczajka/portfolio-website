@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# My own portfolio website - dariuszczajka.com 
+> Live demo [_here_](https://dariuszczajka.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Screenshots](#screenshots)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Contact](#contact)
 
-## Available Scripts
+## General Information
+- This website was build using React.js, styled-components and a few other npm packages.
+- ** Currently only polish language is supported ** - but it is my priority to make it accesible to people from around the world
+- My main goal while working on this project was to encounter real-life programming challanges and solve them - that's the best way of learning new stuff in my opinion.
+- If you spot a bug or techniques contradictory to current good code practices - a heads-up would be much appreciated.
 
-In the project directory, you can run:
+## Technologies Used
+- HTML 5
+- CSS 3
+- React.js
+- styled-components 
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Desktop
+Chrome 98.0.4758.102 on Linux Mint 20.2
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Desktop 1](https://i.imgur.com/5oK9txR.png "Homepage")
 
-### `npm test`
+![Desktop 2](https://i.imgur.com/azyBrsQ.png "Skills page")
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Desktop 3](https://i.imgur.com/kGDipwH.png "Projects page")
 
-### `npm run build`
+Safari 15 on iPhone 13
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Mobile 1](https://imgur.com/Q9P0XZK.png "Homepage - mobile")
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Mobile 2](https://imgur.com/JDsWYHu.png "Skills page - mobile")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Mobile 3](https://imgur.com/2VA0dht.png "Projects page - mobile")
 
-### `npm run eject`
+## Project Status
+Project is: _in progress_ 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Room for Improvement
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+As far as i am concerned - the sky is the limit with this project. Over time i'll try to make it look as clean and as effective as it is possible. My few ideas for further project development. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To do:
+- ** English language support ** - my current priority
+- Case-study sites for each project
+- Contact form support
 
-## Learn More
+Ideas:
+- Improvement of responsiveness
+- Better animations 
+- Complete redesign of "Skills page"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Created by Dariusz Czajka [LinkedIn](https://www.linkedin.com/in/dariuszczajka/) [E-mail](mailto:dczajka@tuta.io) - feel free to contact me!
