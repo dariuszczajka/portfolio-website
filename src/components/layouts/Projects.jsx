@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import ListProject from "../ListProject";
-import pizza from "../../resources/assets/pizza.png";
-import portfolio from "../../resources/assets/portfolio.png";
-import movies from "../../resources/assets/movies.jpeg";
-import chatApp from "../../resources/assets/chat-app.png";
+import pizza from "../../assets/pizza.png";
+import portfolio from "../../assets/portfolio.png";
+import movies from "../../assets/movies.jpeg";
+import chatApp from "../../assets/chat-app.png";
 import {useNav} from "../UseNav";
 
 
